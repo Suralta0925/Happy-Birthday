@@ -36,8 +36,8 @@
     text-align: center;
     align-items: center;
     justify-content: center;
-    width: 76px;
-    height: 96px;
+    width: 106px;
+    height: 126px;
     border-radius: 80%;
     position: relative;
     box-shadow: inset -10px -10px 0 rgba(0,0,0,0.07);
@@ -51,21 +51,21 @@
 
 .balloon1{
     animation: balloons1 forwards ;
-    font-size: 30px;
+    font-size: 50px;
 }
 .balloon2{
     animation: balloons2 forwards ;
-    font-size: 30px;
+    font-size: 50px;
     top: -94px;
 }
 .balloon3{
     animation: balloons3 forwards ;
-    font-size: 28px;
+    font-size: 38px;
     bottom: 187px;
 }
 .balloon4{
     animation: balloons4 forwards ;
-    font-size: 28px;
+    font-size: 48px;
     top: -281px;
 }
 
@@ -80,7 +80,7 @@
         opacity: 1;
     }
     100%{
-        transform:translateY(-110vh) rotate(360deg);
+        transform:translateY(-180vh) rotate(360deg);
         opacity: 1;
        
     }
@@ -96,7 +96,7 @@
         opacity: 1;
     }
     100%{
-        transform:translateY(-95vh) rotate(360deg);
+        transform:translateY(-135vh) rotate(360deg);
         opacity: 1;
        
     }
@@ -112,7 +112,7 @@
         opacity: 1;
     }
     100%{
-        transform:translateY(-85vh) rotate(360deg);
+        transform:translateY(-125vh) rotate(360deg);
         opacity: 1;
        
     }
@@ -151,6 +151,7 @@
     background-color: rgba(255, 255, 100);
     animation-duration: 4.1s;
     left: 37px;
+    color: black;
 }
 .balloon1:nth-child(2)::before{
     color: rgba(255, 255, 100);
@@ -442,4 +443,31 @@
 #open:hover{
     background-color: blueviolet;
     color: white;
+}
+
+
+@media screen and (max-width:900px){
+    .balloon{
+        width: 46px;
+        height: 36px;
+    }
+    .balloon1{
+        animation: balloons1 forwards ;
+        font-size: 30px;
+    }
+    .balloon2{
+        animation: balloons2 forwards ;
+        font-size: 30px;
+        top: -94px;
+    }
+    .balloon3{
+        animation: balloons3 forwards ;
+        font-size: 28px;
+        bottom: 187px;
+    }
+    .balloon4{
+        animation: balloons4 forwards ;
+        font-size: 28px;
+        top: -281px;
+    }
 }
