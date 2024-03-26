@@ -1,8 +1,10 @@
 *{
     /* border: 2px solid red; */
+    margin: 0;
+    padding: 0;
 }
 
-body{
+#main{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,8 +36,8 @@ body{
     text-align: center;
     align-items: center;
     justify-content: center;
-    width: 106px;
-    height: 126px;
+    width: 76px;
+    height: 96px;
     border-radius: 80%;
     position: relative;
     box-shadow: inset -10px -10px 0 rgba(0,0,0,0.07);
@@ -49,21 +51,21 @@ body{
 
 .balloon1{
     animation: balloons1 forwards ;
-    font-size: 50px;
+    font-size: 30px;
 }
 .balloon2{
     animation: balloons2 forwards ;
-    font-size: 50px;
+    font-size: 30px;
     top: -94px;
 }
 .balloon3{
     animation: balloons3 forwards ;
-    font-size: 38px;
+    font-size: 28px;
     bottom: 187px;
 }
 .balloon4{
     animation: balloons4 forwards ;
-    font-size: 48px;
+    font-size: 28px;
     top: -281px;
 }
 
@@ -344,28 +346,100 @@ body{
 .balloon:active{
     display: none;
 }
-@media screen and (max-width:900px){
-    .balloon{
-        width: 76px;
-        height: 96px;
-    }
-    .balloon1{
-        animation: balloons1 forwards ;
-        font-size: 30px;
-    }
-    .balloon2{
-        animation: balloons2 forwards ;
-        font-size: 30px;
-        top: -94px;
-    }
-    .balloon3{
-        animation: balloons3 forwards ;
-        font-size: 28px;
-        bottom: 187px;
-    }
-    .balloon4{
-        animation: balloons4 forwards ;
-        font-size: 28px;
-        top: -281px;
-    }
+
+/* cake */
+
+.cake{
+    width: 100%;
+    position:absolute;
+    bottom: 0;
+}
+.top-layer,
+.middle-layer,
+.bottom-layer{
+    height: 80px;
+    width: 240px;
+    background-repeat: repeat;
+    background-size: 60px 100px;
+    background-position: 28px 0;
+    background-image: linear-gradient(
+        transparent 50px,
+        #fedbab 50px,
+        #fedbab 60px,
+        transparent 60px
+    ), radial-gradient(circle at 30px 5px, #994c10 30px, #fcbf29 31px);
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    margin: auto;
+}
+.middle-layer{
+    transform: scale(0.85);
+    top: 6px;
+}
+.bottom-layer{
+    transform: scale(0.7);
+    top: 26px;
+}
+.candle{
+    height: 45px;
+    width: 15px;
+    background: repeating-linear-gradient(
+    45deg,
+    #fd3018 0px,
+    #fd3018 5px,
+    #ffa89e 5px,
+    #ffa89e 10px
+);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom:202px;
+}
+.candle:before{
+    content: "";
+    position: absolute;
+    height: 16px;
+    width: 16px;
+    background-color: #ffa500;
+    border-radius: 0 50% 50% 50%;
+    bottom: 48px;
+    transform: rotate(45deg);
+    left:-1px;
+}
+/* different html */
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+}
+.first{
+    width: 100%;
+    height: 5%;
+    background-color: yellow;
+}
+.second{
+    width: 100%;
+    height: 5%;
+    background-color: yellow;
+}
+#open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 900;
+    background-color: White;
+    border-radius: 50%;
+    height: 100px;
+    width: 220px;
+}
+#open:hover{
+    background-color: blueviolet;
+    color: white;
 }
